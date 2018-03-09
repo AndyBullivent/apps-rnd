@@ -1,0 +1,28 @@
+{
+  "id": "odisee.menuvandedag",
+  "name": "Menu Van De Dag",
+  "altNames": {
+    "cy": "Menu Van De Dag",
+    "pl": "Menu Van De Dag",
+    "gd-gb": "Menu Van De Dag",
+    "en-us": "Menu Van De Dag"    
+  },
+  "description": "Menu Van De Dag",
+  "version": "1.0.0",
+  "tile": {
+    "title": "Menu Van De Dag",
+    "altTitles": {
+      "cy": "Menu Van De Dag",
+      "pl": "Menu Van De Dag",
+      "gd-gb": "Menu Van De Dag",
+      "en-us": "Menu Van De Dag"
+    },
+    "sizes": [0, 1, 2],
+    "size": 1,
+    "template": "info",
+    "templates": ["icon", "info", "multiline"],
+    "backgroundColor": [1, 138, 20, 255],
+    "foregroundColor": [255, 255, 255, 255],
+    "icon": "fa fa-first-order"
+  }
+}

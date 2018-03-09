@@ -1,0 +1,29 @@
+<div ng-repeat="(dag, dagmenu) in menu">
+    <h4>{{dag | date:'fullDate'}}</h4>
+    <div ng-repeat="(campus, campusmenu) in dagmenu">
+        <div ng-if="myCampus == 'Brussel' && campus == myCampus">
+            <div ng-repeat="(taal, taalmenu) in campusmenu">
+                <div ng-if="taal == myLang">
+                    <div ng-repeat="(item, itemmenu) in taalmenu">
+                        <div>
+                            <b>{{itemmenu.category}}</b>
+                        </div>
+                        <div>{{itemmenu.dish}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div ng-if="myCampus != 'Brussel' && campus == myCampus">
+            <div ng-repeat="(taal, taalmenu) in campusmenu">
+                <div ng-if="taal == 'dutch'" class="ng-scope">
+                    <div ng-repeat="(item, itemmenu) in taalmenu">
+                        <div>
+                            <b>{{itemmenu.category}}</b>
+                        </div>
+                        <div>{{itemmenu.dish}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

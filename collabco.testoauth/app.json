@@ -1,0 +1,28 @@
+{
+  "id": "collabco.testoauth",
+  "name": "Test OAuth",
+  "altNames": {
+    "cy": "Test OAuth",
+    "pl": "Test OAuth",
+    "gd-gb": "Test OAuth",
+    "en-us": "Test OAuth"    
+  },
+  "description": "",
+  "version": "1.0.0",
+  "tile": {
+    "title": "Test OAuth",
+    "altTitles": {
+      "cy": "Test OAuth",
+      "pl": "Test OAuth",
+      "gd-gb": "Test OAuth",
+      "en-us": "Test OAuth"
+    },
+    "sizes": [0, 1, 2],
+    "size": 1,
+    "template": "info",
+    "templates": ["icon", "info"],
+    "backgroundColor": [1, 138, 20, 255],
+    "foregroundColor": [255, 255, 255, 255],
+    "icon": "fa fa-first-order"
+  }
+}

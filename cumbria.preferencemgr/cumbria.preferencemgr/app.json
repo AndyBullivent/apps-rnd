@@ -1,0 +1,28 @@
+{
+  "id": "cumbria.preferencemgr",
+  "name": "UoC Preferences Manager",
+  "altNames": {
+    "cy": "UoC Preferences Manager",
+    "pl": "UoC Preferences Manager",
+    "gd-gb": "UoC Preferences Manager",
+    "en-us": "UoC Preferences Managerr"    
+  },
+  "description": "",
+  "version": "1.0.12",
+  "tile": {
+    "title": "UoC Preferences Manager",
+    "altTitles": {
+      "cy": "UoC Preferences Manager",
+      "pl": "UoC Preferences Manager",
+      "gd-gb": "UoC Preferences Manager",
+      "en-us": "UoC Preferences Manager"
+    },
+    "sizes": [1, 2],
+    "size": 1,
+    "template": "info",
+    "templates": ["info"],
+    "backgroundColor": [1, 138, 20, 255],
+    "foregroundColor": [255, 255, 255, 255],
+    "icon": "fa fa-heart"
+  }
+}

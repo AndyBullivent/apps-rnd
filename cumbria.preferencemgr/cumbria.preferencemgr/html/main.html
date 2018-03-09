@@ -1,0 +1,109 @@
+<div class="cumbria-preference-mgr flex-container flex-container-columns" ng-init="myday.appFlex = true">
+
+  <!-- Fixed header -->
+  <div class="flex-header wrapper bg-light b-b">
+      <button role="link" class="btn btn-sm btn-default pull-left m-r-sm" ng-click="vm.back()">
+        <i aria-hidden="true" class="fa fa-fw fa-chevron-left"></i> <span class="hidden-xs">Back</span>
+      </button>
+    <h1 class="font-thin h3" translate="app.cumbria-preferencemgr.TITLE"></h1>
+  </div>
+
+  <!-- Scrollable content area -->
+  <div permissions="TenantAdmin">
+    <ul class="nav nav-tabs">
+      <li role="presentation" class="" ng-class="{active:vm.tab === ''}" ng-click="vm.tab = ''"><a href="#">WhiteList</a></li>
+      <li role="presentation" class=""  ng-class="{active:vm.tab === '1'}" ng-click="vm.tab = '1'"><a href="#">Categories</a></li>
+      <li role="presentation" class="" ng-class="{active:vm.tab === '2'}" ng-click="vm.tab = '2'"><a href="#">User</a></li>
+    </ul>
+  </div>
+  <div class="flex-xs-1 overflow-auto wrapper-md"  >
+
+    <!-- Display loading message if user groups haven't yet loaded -->
+    <div ng-if="!vm.userGroups" ng-bind="vm.message" class="alert alert-info"></div>
+
+    <div ng-if="vm.tab===''">
+      <div ng-if="vm.whiteList">
+        <div style="clear:both">
+            <lable>Filter groups</lable><input type="text" ng-model="vm.search">
+            <button class="btn btn-success" ng-disabled="vm.saving" ng-click="vm.save(vm.whiteList)">Save Changes</button>
+        </div>
+        <div class="whitelist-col">
+          <span class="h2">AAD Groups Available</span>
+        </div>
+        <div class="whitelist-col">
+            <span class="h2">Whitelisted Groups</span>
+          </div>
+        <div permissions="TenantAdmin">
+          <div class="whitelist-col" >
+            <ul class="list-group">
+                <li class="list-group-item" ng-repeat="group in vm.whiteList |filter:vm.search: group.isWhitelisted track by $index" ng-if="!group.isWhitelisted">
+                    <span> {{group.displayName}} </span><span><input type="checkbox" ng-model="group.isWhitelisted" ng-disabled="vm.saving" /></span>
+                </li>
+            </ul>
+          </div>
+          <div class="whitelist-col" >
+            <ul class="list-group">
+                <li class="list-group-item" ng-repeat="group in vm.whiteList |filter:!group.isWhitelisted track by $index">
+                  <span> {{group.displayName}} </span><span><input type="checkbox" ng-model="group.isWhitelisted" ng-disabled="vm.saving" /></span>
+                </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <span ng-if="!vm.whiteList" ng-bind="vm.message"></span>
+    </div>
+    <div ng-if="vm.tab==='1'">
+      <div ng-if="vm.categories">
+      <h2>Categories</h2>
+      <div ng-repeat="category in vm.categories track by $index">
+        <h3>{{category.category1}}</h3>
+        <ul>
+          <li ng-repeat="group in category.allowedGroups | orderBy : 'friendlyName'">
+            {{group.friendlyName}}
+          </li>
+        </ul>
+      </div>
+    </div>
+    </div>
+    <div ng-if="vm.tab==='2'">
+      <div ng-if="vm.userGroups">
+        <p><strong>This App lets you personalise:</strong></p>
+        <ol type="a"> 
+          <li>which articles appear in your News and Events Feed and</li>
+          <li>which Campus Map and Local Information tiles appear in your “My Campus” dashboard.</li>
+        </ol>
+        <p>Tick or un-tick your preferences, and you’ll see the changes take effect after logging off and on again from the Hub</p>
+        <div ng-repeat="category in vm.categories track by $index">
+            <h3>{{category.category1}}</h3>
+            <ul id="userGroupList">
+              <li ng-repeat="group in category.allowedGroups | orderBy : 'friendlyName'">
+                <input type="checkbox" id="{{group.id}}" ng-model="group.isMember" ng-click="vm.updateUserMembership(group)" ng-checked="vm.isUserInGroup(group.id)">
+                <label for={{group.id}}>{{group.friendlyName}}</label>
+              </li>
+            </ul>
+          </div>
+
+          <!--div class="whitelist-col">
+            <span class="h2">Groups Available</span>
+          </div>
+          <div class="whitelist-col">
+              <span class="h2">Your Group Membership</span>
+          </div>
+          <div class="whitelist-col" >
+            <ul class="list-group">
+                <li class="list-group-item" ng-repeat="group in vm.userGroups |filter:myday.globalSearch: group.isMember track by $index" ng-if="!group.isMember">
+                    <span><input type="checkbox" ng-model="group.isMember" ng-change="vm.updateUserMembership(group)"/></span><span> {{group.studentFriendlyName}} </span>
+                </li>
+            </ul>
+          </div>
+          <div class="whitelist-col" >
+            <ul class="list-group">
+                <li class="list-group-item" ng-repeat="group in vm.userGroups |filter:!group.isMember track by $index">
+                    <span><input type="checkbox" ng-model="group.isMember" ng-change="vm.updateUserMembership(group)"/></span><span> {{group.studentFriendlyName}} </span>
+                </li>
+            </ul>
+          </div>-->
+      </div>
+    </div> 
+  </div>
+</div>

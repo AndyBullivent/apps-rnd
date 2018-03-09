@@ -1,0 +1,33 @@
+{
+  "id": "heriotwatt.primosearch",
+  "name": "Primo Search",
+  "altNames": {
+    "cy": "Primo Search",
+    "pl": "Primo Search",
+    "gd-gb": "Primo Search",
+    "en-us": "Primo Search"    
+  },
+  "description": "Primo Search",
+  "version": "1.0.4",
+  "tile": {
+    "title": "Primo Search",
+    "altTitles": {
+      "cy": "Primo Search",
+      "pl": "Primo Search",
+      "gd-gb": "Primo Search",
+      "en-us": "Primo Search"
+    },
+    "sizes": [0,1,2],
+    "size": 2,
+    "template": "searchform",
+    "templates": ["searchform"],
+    "customTemplates": [{
+      "id":"searchform",
+      "name":"searchform",
+      "sizes":[2]
+    }],
+    "backgroundColor": [1, 138, 20, 255],
+    "foregroundColor": [255, 255, 255, 255],
+    "icon": "fa fa-search"
+  }
+}

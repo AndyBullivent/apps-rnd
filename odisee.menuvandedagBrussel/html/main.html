@@ -1,0 +1,38 @@
+<div class="flex-container flex-container-columns" ng-init="myday.appFlex = true">
+    <!-- Fixed header -->
+    <div class="flex-header wrapper bg-light b-b">
+        <h1 class="font-thin h3">Menu {{myCampus}}</h1>
+    </div>
+    <!-- Scrollable content area -->
+    <div class="flex-xs-1 overflow-auto wrapper-md">
+        <div ng-repeat="(dag, dagmenu) in menu">
+            <h4>{{dag | date:'fullDate'}}</h4>
+            <div ng-repeat="(campus, campusmenu) in dagmenu">
+                <div ng-if="myCampus == 'Brussel' && campus == myCampus">
+                    <div ng-repeat="(taal, taalmenu) in campusmenu">
+                        <div ng-if="taal == myLang">
+                            <div ng-repeat="(item, itemmenu) in taalmenu">
+                                <div>
+                                    <b>{{itemmenu.category}}</b>
+                                </div>
+                                <div>{{itemmenu.dish}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div ng-if="myCampus != 'Brussel' && campus == myCampus">
+                    <div ng-repeat="(taal, taalmenu) in campusmenu">
+                        <div ng-if="taal == 'dutch'" class="ng-scope">
+                            <div ng-repeat="(item, itemmenu) in taalmenu">
+                                <div>
+                                    <b>{{itemmenu.category}}</b>
+                                </div>
+                                <div>{{itemmenu.dish}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+{
+  "id": "collabco.libloadtester",
+  "name": "LibLoadTester",
+  "altNames": {
+    "cy": "LibLoadTester",
+    "pl": "LibLoadTester",
+    "gd-gb": "LibLoadTester",
+    "en-us": "LibLoadTester"    
+  },
+  "description": "",
+  "version": "1.0.0",
+  "tile": {
+    "title": "LibLoadTester",
+    "altTitles": {
+      "cy": "LibLoadTester",
+      "pl": "LibLoadTester",
+      "gd-gb": "LibLoadTester",
+      "en-us": "LibLoadTester"
+    },
+    "sizes": [1, 2],
+    "size": 1,
+    "template": "info",
+    "templates": ["info", "multiline"],
+    "backgroundColor": [1, 138, 20, 255],
+    "foregroundColor": [255, 255, 255, 255],
+    "icon": "fa fa-first-order"
+  }
+}

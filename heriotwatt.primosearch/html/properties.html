@@ -1,0 +1,14 @@
+<div class="form-group"  ng-class="{ 'has-error': modal.submitted && modal.form.baseUrl.$invalid }">
+  <label class="col-sm-4 control-label" for="label-scope" translate-once="app.heriotwatt-primosearch.properties.SCOPE"></label>
+    <div class="col-sm-8">  
+    <input
+      type="text"
+      class="form-control"
+      name="scope"
+      id="label-scope"
+      ng-model="modal.edit.properties.scope"
+      ng-maxlength="200"
+    >
+    <p class="help-block" translate-once="app.heriotwatt-primosearch.properties.SCOPEDESC"></p>
+  <div class="help-block" ng-messages="modal.form.excludeSite.$error" ng-if="modal.submitted"><div ng-messages-include="app/common/ng-messages.html"></div></div>
+</div>

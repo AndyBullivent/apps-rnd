@@ -1,0 +1,10 @@
+.heriotwatt-primo-search{
+	padding-top: 7%;
+}
+
+.heriotwatt-primo-search form input{
+	color: black!important;
+}
+
+.myday-sidebar a[ui-sref="app.heriotwatt-primosearch"] { display: none; }
+

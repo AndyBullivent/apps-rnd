@@ -1,0 +1,23 @@
+{
+  "id": "odisee.menuvandedagBrussel",
+  "name": "Menu Brussel",
+  "altNames": {
+    "nl": "Menu Brussel"
+  },
+  "description": "Menu Brussel",
+  "version": "1.0.4",
+  "tile": {
+    "title": "Menu Brussel",
+    "altTitles": {
+      "nl": "Menu Brussel",
+      "en-gb": "Menu Brussel"
+    },
+    "sizes": [ 1, 2 ],
+    "size": 2,
+    "template": "multiline",
+    "templates": [ "multiline" ],
+    "backgroundColor": [ 1, 138, 20, 255 ],
+    "foregroundColor": [ 255, 255, 255, 255 ],
+    "icon": "fa fa-first-order"
+  }
+}

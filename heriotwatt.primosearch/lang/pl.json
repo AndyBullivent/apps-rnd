@@ -1,0 +1,13 @@
+{
+  "app.heriotwatt-primosearch": {
+    "tile": {
+      "PLACEHOLDER": "Search Discovery"
+    },
+    "properties":{
+      "BASEURL":"Base URL",
+      "BASEURLDESC":"Enter the url to the Primo Search Service",
+      "SCOPE":"Scope",
+      "SCOPEDESC":"The scope for this search box to search, e.g. Dubai, Edinburgh or Malaysia"
+    }
+  }
+}
