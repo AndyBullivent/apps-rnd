@@ -17,7 +17,7 @@
 
     var menu = {
       name: 'menu',
-      url: '/menu/:campus',
+      url: '/menu/{:campus}',
       controller: 'OdiseeMenuvandedagMenuCtrl as vm',
       dependencies: ['OdiseeMenuvandedagService'],
     }

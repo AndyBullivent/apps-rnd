@@ -10,14 +10,13 @@
     // The tile object representing this tile is accessed at $scope.tile
     var tile = $scope.tile;
     var stateAppId = 'app.' + tile.appId.replace('.', '-');
-    debugger
     var params = {
-      campus :  tile.properties.campus || 'Aalst'
+      campus :  tile.properties.campus || 'Brussel'
     };
 
     tile.onActivated = function(){
       var str = stateAppId + '.menu' ;
-      $state.go(str,tile.properties.campus);
+      $state.go(str,params);
     }
 
     tile.ready();
