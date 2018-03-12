@@ -12,14 +12,18 @@
     var main = {
       appId: 'odisee.menuvandedag',
       html: 'main',
-      url: '/:campus',
       controller: 'OdiseeMenuvandedagCtrl as vm',
-      params:{
-        campus: { value: 'Aalst'}
-      }
     };
 
+    var menu = {
+      name: 'menu',
+      url: '/menu/:campus',
+      controller: 'OdiseeMenuvandedagMenuCtrl as vm',
+      dependencies: ['OdiseeMenuvandedagService'],
+    }
+
     $stateProvider.appState(main);
+    $stateProvider.appState(menu);
   }
 
 

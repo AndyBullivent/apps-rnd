@@ -1,5 +1,9 @@
 {
   "app.odisee-menuvandedag": {
+    "properties":{
+      "CAMPUS": "Campus",
+      "CAMPUSDESC": "Which Campus' Menu"
+    },
     "tile": {
       "TITLE1": "Title 1",
       "TITLE2": "Title 2",

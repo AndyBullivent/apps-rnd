@@ -5,19 +5,19 @@
     .module('tile.odisee.menuvandedag', [])
     .controller('tile.odisee.menuvandedag', TileCtrl);
 
-
-
-  function TileCtrl ($scope) {
+  function TileCtrl ($scope, $state) {
 
     // The tile object representing this tile is accessed at $scope.tile
     var tile = $scope.tile;
     var stateAppId = 'app.' + tile.appId.replace('.', '-');
+    debugger
     var params = {
-      campus : tile.properties.campus || 'Aalst'
+      campus :  tile.properties.campus || 'Aalst'
     };
 
     tile.onActivated = function(){
-      $state.go(stateAppId,params);
+      var str = stateAppId + '.menu' ;
+      $state.go(str,tile.properties.campus);
     }
 
     tile.ready();

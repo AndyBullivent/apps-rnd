@@ -7,7 +7,7 @@
 
   var _base = '/api/endpoint/proxyStuvoMenu';
 
-  function OdiseeMenuvandedagService () {
+  function OdiseeMenuvandedagService ($q,$http) {
 
     var self = this;
     

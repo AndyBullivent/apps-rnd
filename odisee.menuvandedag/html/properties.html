@@ -1,10 +1,21 @@
-<div ng-controller="OdiseeMenuvandedagPropertiesCtrl as TileProps">
+<div>
     <div class="form-group">
         <div class="col-sm-8">
            <div>
-                <label translate-once="app.odisee-menuvandedag.CAMPUS" for="label-campus">
+                <label class="col-sm-4 control-label" translate="app.odisee-menuvandedag.properties.CAMPUS" for="label-campus">
                 </label>
-                <input type="text" id="label-campus" ng-model="modal.edit.properties.campus"  />
+                <input 
+                    type="text" 
+                    class="form-control"
+                    name="campus"
+                    id="label-campus" 
+                    ng-model="modal.edit.properties.campus"  
+                >
+                <p class="help-block" translate="app.odisee-menuvandedag.properties.CAMPUSDESC"></p>
+                <div class="help-block" ng-messages="modal.form.excludeSite.$error" ng-if="modal.submitted">
+                    <div ng-messages-include="app/common/ng-messages.html"></div>
+                </div>
           </div>
+        </div>
     </div>
 </div>

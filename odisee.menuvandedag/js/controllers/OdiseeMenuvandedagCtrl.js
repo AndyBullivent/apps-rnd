@@ -6,10 +6,7 @@
     .controller('OdiseeMenuvandedagCtrl', OdiseeMenuvandedagCtrl);
 
   
-  function OdiseeMenuvandedagCtrl ($stateParams) {
-    
-     $scope.myCampus = $stateParams.menuId; //moduleCampus; Needs to be passed in from a state
-
+  function OdiseeMenuvandedagCtrl ($scope, $stateParams, OdiseeMenuvandedagService) {
 
 
   }
